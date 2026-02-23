@@ -54,11 +54,11 @@ public class FilmsManagerTest {
     @Test
     public void testBelowLimit() {
 
-        manager.addingNewFilm("Movie 1");
-        manager.addingNewFilm("Movie 2");
-        manager.addingNewFilm("Movie 3");
+        manager.addingNewFilm("Фильм 1");
+        manager.addingNewFilm("Фильм2");
+        manager.addingNewFilm("Фильм 3");
 
-        String[] expected = {"Movie 3", "Movie 2", "Movie 1"};
+        String[] expected = {"Фильм 3", "Фильм 2", "Фильм 1"};
         String[] actual = manager.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
