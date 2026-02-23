@@ -48,5 +48,18 @@ public class FilmsManagerTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
+    @Test
+    public void testBelowLimit() {
+
+        manager.addingNewFilm("Movie 1");
+        manager.addingNewFilm("Movie 2");
+        manager.addingNewFilm("Movie 3");
+
+        String[] expected = {"Movie 3", "Movie 2", "Movie 1"};
+        String[] actual = manager.findLast();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
 
 }
