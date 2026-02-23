@@ -55,7 +55,7 @@ public class FilmsManagerTest {
     public void testBelowLimit() {
 
         manager.addingNewFilm("Фильм 1");
-        manager.addingNewFilm("Фильм2");
+        manager.addingNewFilm("Фильм 2");
         manager.addingNewFilm("Фильм 3");
 
         String[] expected = {"Фильм 3", "Фильм 2", "Фильм 1"};
